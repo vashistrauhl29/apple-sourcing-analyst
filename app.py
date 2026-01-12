@@ -55,7 +55,7 @@ def calculate_tco(fob_price, freight, lead_time_weeks, interest_rate, base_duty,
         "Total TCO": total_landed_cost
     }
 
-# --- 3. AI ANALYST ENGINE ---
+# --- 3. AI ANALYST ENGINE (UPDATED) ---
 def generate_ai_insight(res_a, res_b, savings, alt_origin, lead_time_diff):
     """
     Generates a text-based executive summary based on the data deltas.
@@ -68,22 +68,36 @@ def generate_ai_insight(res_a, res_b, savings, alt_origin, lead_time_diff):
         verdict = "⚠️ **Recommendation: REMAIN in China**"
         reason = f"Moving to {alt_origin} increases cost by **${abs(savings):,.2f} per unit**."
 
-    # 2. The "Why" (Drivers)
+    # 2. The "Why" (Drivers) - Fixed Thresholds
     drivers = []
     
-    # Check Tariff Impact
-    tariff_gap = (res_a['Section 301 Penalty'] + res_a['Base Duty']) - (res_b['Section 301 Penalty'] + res_b['Base Duty'])
-    if tariff_gap > 5:
+    # A. Tariff Impact
+    tariff_a = res_a['Section 301 Penalty'] + res_a['Base Duty']
+    tariff_b = res_b['Section 301 Penalty'] + res_b['Base Duty']
+    tariff_gap = tariff_a - tariff_b
+    
+    if tariff_gap > 0.01:
         drivers.append(f"Avoiding China tariffs saves **${tariff_gap:,.2f}** in duties.")
+    elif tariff_gap < -0.01:
+        drivers.append(f"However, tariffs are higher in {alt_origin} by **${abs(tariff_gap):,.2f}**.")
     
-    # Check Logistics Impact
+    # B. Logistics Impact (Freight)
     freight_gap = res_b['Freight'] - res_a['Freight']
+    if freight_gap > 0.01:
+        drivers.append(f"Logistics costs increase by **${freight_gap:,.2f}** due to distance/mode.")
+    elif freight_gap < -0.01:
+        drivers.append(f"Logistics costs decrease by **${abs(freight_gap):,.2f}**.")
+
+    # C. Inventory Impact (Cost of Capital)
     inventory_gap = res_b['Inventory Cost'] - res_a['Inventory Cost']
-    
-    if freight_gap > 2:
-        drivers.append(f"However, logistics costs increase by **${freight_gap:,.2f}**.")
-    if inventory_gap > 5:
+    if inventory_gap > 0.01:
         drivers.append(f"Extended lead times add **${inventory_gap:,.2f}** in hidden inventory holding costs.")
+    elif inventory_gap < -0.01:
+        drivers.append(f"Faster lead times save **${abs(inventory_gap):,.2f}** in inventory costs.")
+        
+    # Fallback if nothing changed
+    if not drivers:
+        drivers.append("No significant cost drivers detected (Deltas < $0.01).")
         
     return verdict, reason, drivers
 
