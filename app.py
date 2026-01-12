@@ -127,7 +127,7 @@ st.markdown("---")
 col_a, col_b = st.columns(2)
 
 def estimate_freight(weight, mode):
-    if mode == "Air": return weight * 8.50
+    if mode == "Air": return weight * 8.50 
     return weight * 0.50
 
 # OPTION A: CHINA
@@ -141,8 +141,10 @@ with col_a:
         def_a_lead, def_a_freight = 1, estimate_freight(product_data['Weight_kg'], "Air")
         
     col_a1, col_a2 = st.columns(2)
-    a_lead = col_a1.number_input("Lead Time (Wks)", value=float(def_a_lead), key="a_lead")
-    a_freight = col_a2.number_input("Freight (USD)", value=float(f"{def_a_freight:.2f}"), key="a_freight")
+    
+    # FIX: Added dynamic keys (f"{a_mode}") to force reset when mode changes
+    a_lead = col_a1.number_input("Lead Time (Wks)", value=float(def_a_lead), key=f"a_lead_{a_mode}")
+    a_freight = col_a2.number_input("Freight (USD)", value=float(f"{def_a_freight:.2f}"), key=f"a_freight_{a_mode}")
 
     res_a = calculate_tco(
         product_data['Unit_Price_USD'], a_freight, a_lead, interest_rate,
@@ -157,15 +159,17 @@ with col_b:
     b_mode = st.radio("Logistics Mode (B)", ["Ocean 🚢", "Air ✈️"], horizontal=True, index=0)
     
     if "Ocean" in b_mode:
-        def_b_lead = 7 if alt_origin != "Mexico" else 2
+        def_b_lead = 7 if alt_origin != "Mexico" else 2 
         def_b_freight = estimate_freight(product_data['Weight_kg'], "Ocean") * 1.2
     else:
         def_b_lead = 1
         def_b_freight = estimate_freight(product_data['Weight_kg'], "Air") * 1.1
 
     col_b1, col_b2 = st.columns(2)
-    b_lead = col_b1.number_input("Lead Time (Wks)", value=float(def_b_lead), key="b_lead")
-    b_freight = col_b2.number_input("Freight (USD)", value=float(f"{def_b_freight:.2f}"), key="b_freight")
+    
+    # FIX: Added dynamic keys (f"{b_mode}") here as well
+    b_lead = col_b1.number_input("Lead Time (Wks)", value=float(def_b_lead), key=f"b_lead_{b_mode}")
+    b_freight = col_b2.number_input("Freight (USD)", value=float(f"{def_b_freight:.2f}"), key=f"b_freight_{b_mode}")
     
     b_type = "Mexico" if alt_origin == "Mexico" else "Standard"
 
@@ -175,7 +179,7 @@ with col_b:
     )
     
     savings = res_a['Total TCO'] - res_b['Total TCO']
-    st.metric("Total TCO", f"${res_b['Total TCO']:,.2f}",
+    st.metric("Total TCO", f"${res_b['Total TCO']:,.2f}", 
               delta=f"${savings:,.2f} Savings" if savings > 0 else f"-${abs(savings):,.2f} Cost Increase")
 
 # --- 6. VISUALIZATION (THE FIX) ---
