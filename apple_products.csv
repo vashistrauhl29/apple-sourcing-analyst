@@ -1,0 +1,16 @@
+Product_Name,HTS_Code,Base_Duty_Rate,Section_301_Tariff,Unit_Price_USD,Weight_kg,Category
+iPhone 15 Pro,8517.13.00,0.0%,0.0%,450.00,0.187,Finished Good
+MacBook Air M3,8471.30.01,0.0%,0.0%,850.00,1.240,Finished Good
+iPad Pro 12.9,8471.30.01,0.0%,0.0%,520.00,0.682,Finished Good
+Apple Watch Ultra 2,9102.11.45,5.3%,0.0%,380.00,0.061,Finished Good
+AirPods Pro 2nd Gen,8518.30.20,0.0%,0.0%,95.00,0.051,Finished Good
+OLED Display Panel 6.1in,8531.20.00,3.9%,25.0%,85.00,0.045,Component
+M3 Logic Board Assembly,8473.30.51,0.0%,25.0%,240.00,0.120,Component
+Lithium-Ion Battery 3279mAh,8506.50.00,3.4%,7.5%,18.50,0.042,Component
+A17 Pro Processor Chip,8542.31.00,0.0%,25.0%,65.00,0.003,Component
+Camera Module Triple Lens,8525.80.50,2.1%,25.0%,42.00,0.015,Component
+Aluminum Chassis MacBook,7616.99.51,2.5%,10.0%,75.00,0.450,Component
+Glass Touch Digitizer,7007.19.80,5.6%,25.0%,28.00,0.025,Component
+NFC Antenna Assembly,8529.90.73,0.0%,25.0%,3.50,0.002,Component
+Taptic Engine Vibration Motor,8501.10.40,6.7%,25.0%,8.20,0.008,Component
+USB-C Port Assembly,8536.69.40,2.6%,25.0%,4.75,0.005,Component
