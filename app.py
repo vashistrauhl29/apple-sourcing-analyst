@@ -88,7 +88,7 @@ def generate_ai_insight(res_a, res_b, savings, alt_origin, lead_time_diff):
     return verdict, reason, drivers
 
 # --- 4. SIDEBAR CONTROLS ---
-st.sidebar.title(" Control Tower")
+st.sidebar.title("🍎 Control Tower")
 selected_product_name = st.sidebar.selectbox("Select Target SKU", product_df["Product_Name"].unique())
 product_data = product_df[product_df["Product_Name"] == selected_product_name].iloc[0]
 
