@@ -204,7 +204,7 @@ fig.update_layout(barmode='group', height=400, title_text="Landed Cost Breakdown
 st.plotly_chart(fig, use_container_width=True)
 
 # --- 7. EXECUTIVE AI SUMMARY ---
-st.subheader("🤖 AI Sourcing Analyst Recommendation")
+st.subheader("AI Sourcing Analyst Recommendation")
 
 verdict, reason, drivers = generate_ai_insight(res_a, res_b, savings, alt_origin, b_lead - a_lead)
 
