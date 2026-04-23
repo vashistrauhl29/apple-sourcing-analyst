@@ -1,3 +1,7 @@
-streamlit
-pandas
-plotly
+streamlit>=1.30
+pandas>=2.0
+plotly>=5.18
+numpy>=1.26
+pulp>=2.7
+scipy>=1.11
+pytest>=7.4

@@ -1,0 +1,21 @@
+origin_country,destination_country,mode,transit_days,usd_per_kg,insurance_pct,carbon_g_per_kg_km,distance_km,as_of,source
+China,USA,Ocean,32,0.48,0.004,11,11000,2026-04-01,Maersk contract
+China,USA,Air,3,8.20,0.003,500,11000,2026-04-01,DHL GSA Q2-2026
+Vietnam,USA,Ocean,36,0.56,0.004,11,13000,2026-04-01,ONE contract
+Vietnam,USA,Air,4,8.90,0.003,500,13000,2026-04-01,DHL GSA Q2-2026
+India,USA,Ocean,40,0.62,0.004,11,14500,2026-04-01,MSC contract
+India,USA,Air,4,9.40,0.003,500,14500,2026-04-01,DHL GSA Q2-2026
+Mexico,USA,Truck,3,0.35,0.002,60,2600,2026-04-01,Werner contract
+Mexico,USA,Air,1,6.50,0.003,500,2600,2026-04-01,Regional carrier
+Thailand,USA,Ocean,34,0.54,0.004,11,13500,2026-04-01,Evergreen contract
+Thailand,USA,Air,4,8.60,0.003,500,13500,2026-04-01,DHL GSA Q2-2026
+Taiwan,USA,Ocean,26,0.52,0.004,11,11500,2026-04-01,Yang Ming contract
+Taiwan,USA,Air,3,8.40,0.003,500,11500,2026-04-01,DHL GSA Q2-2026
+China,China,Truck,2,0.10,0.001,60,800,2026-04-01,Domestic
+Vietnam,China,Ocean,7,0.18,0.002,11,1800,2026-04-01,Regional carrier
+Taiwan,China,Ocean,4,0.14,0.002,11,1000,2026-04-01,Regional carrier
+India,India,Truck,2,0.12,0.001,60,1200,2026-04-01,Domestic
+Vietnam,Vietnam,Truck,1,0.08,0.001,60,400,2026-04-01,Domestic
+Mexico,Mexico,Truck,1,0.08,0.001,60,500,2026-04-01,Domestic
+Taiwan,Taiwan,Truck,1,0.06,0.001,60,200,2026-04-01,Domestic
+Thailand,Thailand,Truck,1,0.08,0.001,60,400,2026-04-01,Domestic

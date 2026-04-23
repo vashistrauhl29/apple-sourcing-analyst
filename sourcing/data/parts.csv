@@ -1,0 +1,16 @@
+id,name,hts_code,category,weight_kg,unit_of_measure,description
+P_IPH15P,iPhone 15 Pro,8517.13.00,Finished Good,0.187,each,Flagship smartphone final assembly
+P_MBA_M3,MacBook Air M3,8471.30.01,Finished Good,1.240,each,Consumer notebook
+P_IPAD_PRO,iPad Pro 12.9,8471.30.01,Finished Good,0.682,each,Pro tablet
+P_AWU2,Apple Watch Ultra 2,9102.11.45,Finished Good,0.061,each,Rugged smartwatch
+P_APP2,AirPods Pro 2nd Gen,8518.30.20,Finished Good,0.051,each,Wireless earbuds
+P_OLED61,OLED Display Panel 6.1in,8531.20.00,Component,0.045,each,Flexible OLED for iPhone
+P_M3_LB,M3 Logic Board Assembly,8473.30.51,Subassembly,0.120,each,Main PCBA for MacBook Air
+P_BAT,Lithium-Ion Battery 3279mAh,8506.50.00,Component,0.042,each,iPhone-class Li-ion cell
+P_A17_SOC,A17 Pro Processor Chip,8542.31.00,Component,0.003,each,Apple silicon SoC
+P_CAM_TRI,Camera Module Triple Lens,8525.80.50,Component,0.015,each,Rear triple camera array
+P_CHAS_MBA,Aluminum Chassis MacBook,7616.99.51,Component,0.450,each,CNC 6000-series Al enclosure
+P_GLASS,Glass Touch Digitizer,7007.19.80,Component,0.025,each,Ceramic-shielded front glass
+P_NFC,NFC Antenna Assembly,8529.90.73,Component,0.002,each,Embedded NFC radio
+P_TAPTIC,Taptic Engine Vibration Motor,8501.10.40,Component,0.008,each,Linear resonant actuator
+P_USBC,USB-C Port Assembly,8536.69.40,Component,0.005,each,USB-C receptacle + flex

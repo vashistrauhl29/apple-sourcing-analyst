@@ -1,0 +1,11 @@
+id,name,country,tier,altman_z,esg_audit_status,renewable_pct,geopolitical_risk,years_of_relationship
+S_FOXCONN,Foxconn / Hon Hai,China,1,3.1,Pass,0.42,0.55,24
+S_LUXSHARE,Luxshare Precision,China,1,3.4,Pass,0.51,0.55,14
+S_PEGATRON,Pegatron,China,1,2.8,Pass,0.38,0.55,20
+S_WISTRON_IN,Wistron India (Tata),India,1,2.6,Pass,0.35,0.35,6
+S_FOXCONN_IN,Foxconn India (Sriperumbudur),India,1,3.0,Pass,0.44,0.30,5
+S_LUXSHARE_VN,Luxshare Vietnam,Vietnam,1,3.2,Pass,0.40,0.28,8
+S_GOERTEK_VN,GoerTek Vietnam,Vietnam,1,2.5,Pass,0.32,0.30,7
+S_FOXCONN_MX,Foxconn Mexico (Cd. Juárez),Mexico,1,3.1,Pass,0.60,0.22,10
+S_BYD_TH,BYD Electronics Thailand,Thailand,1,2.7,Pass,0.36,0.25,4
+S_TSMC_TW,TSMC,Taiwan,1,4.1,Pass,0.62,0.50,18

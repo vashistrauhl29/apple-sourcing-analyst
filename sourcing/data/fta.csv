@@ -1,0 +1,5 @@
+fta_name,origin_country,destination_country,hts_prefix,savings_pct,substantial_transformation_required,min_regional_content_pct,source
+USMCA,Mexico,USA,*,1.000,True,0.60,USTR USMCA 2020
+USMCA,Canada,USA,*,1.000,True,0.60,USTR USMCA 2020
+CPTPP,Vietnam,USA,*,0.000,True,0.50,Vietnam not party w/ US; placeholder
+GSP_India,India,USA,*,0.000,True,0.35,India GSP suspended 2019

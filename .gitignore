@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+
+# Test + coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code session
+.claude/
+
+# Streamlit runtime
+.streamlit/secrets.toml
+
+# Legacy reference screenshots (not part of the product)
+Sample Post.png
+issues/

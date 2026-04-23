@@ -1,0 +1,23 @@
+Spent a few weeks building an eleven module sourcing decision tool for the Global Supply Sourcing Manager role at Apple. Built in Streamlit.
+
+Sourcing managers do their real thinking in Excel. Award split decisions, tariff what ifs, Apple 2030 carbon math, should cost builds, NPI gate planning. Each is a tab someone built years ago that the team forks every quarter. Weeks to move one number. Hard to defend in a QBR. No audit trail. That's what this tool replaces.
+
+𝗣𝗼𝗿𝘁𝗳𝗼𝗹𝗶𝗼 𝗖𝗼𝗺𝗽𝗮𝗿𝗮𝘁𝗼𝗿. Every qualified supplier for a part, ranked on total landed cost on one screen. FOB, freight, tariff, yield loss, inventory carry, NRE amortization, optional carbon shadow. Replaces the A versus B view with an N way ranking.
+
+𝗔𝘄𝗮𝗿𝗱 𝗦𝗽𝗹𝗶𝘁 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗲𝗿. Mixed integer linear program. Feed it capacity ceilings, country concentration caps, DPPM floors, a minimum supplier count, and an objective weighting of cost, risk, and carbon. Returns the allocation plus which constraints are actually binding.
+
+𝗦𝗵𝗼𝘂𝗹𝗱 𝗖𝗼𝘀𝘁 𝗧𝗲𝗮𝗿𝗱𝗼𝘄𝗻. Builds the supplier price bottoms up from BOM material, labor hours times regional wage, overhead, SG&A, target margin. Then writes out the specific negotiation talking points tied to BLS wages, LME metals, and public supplier annual reports.
+
+𝗪𝗵𝗮𝘁 𝗜𝗳. Tariff scenarios loaded in (Section 301 plus 25pp, USMCA suspension, China 301 repeal). Demand shocks that fire expedite premiums when capacity overflows. Monte Carlo with ten thousand trials returning P50, P90, P95. Tornado chart ranking every variance driver.
+
+𝗡𝗣𝗜 𝗕𝗮𝗰𝗸𝘄𝗮𝗿𝗱 𝗣𝗹𝗮𝗻𝗻𝗲𝗿. Takes a launch date and walks back through Last Time Buy, tooling kickoff, EVT, DVT, PVT, MP ramp. Each gate has a stage margin buffer. Traffic light flags anything past due.
+
+The other six modules. Sustainability (Scope 1, 2, 3 per supplier against Apple 2030, shadow carbon price into TCO). Trade Compliance (FTA qualifier with substantial transformation test). Supplier Risk (Altman Z, geopolitical exposure, Time to Recover, ESG audit rolled into one score). AI Analyst (natural language queries over the catalog, quote anomaly detector, six stakeholder briefings ready to paste into email). Executive Dashboard (portfolio red flags, country concentration, resilience rollup). Sustaining Ops (second source tracking, ECO cost impact, Last Time Buy sizing).
+
+Python, Streamlit, pandas, PuLP for the MILP, numpy for the Monte Carlo. 38 unit tests. Seed data is synthetic with sources and dates marked, so swapping in real RFQ data is just overwriting twelve CSVs.
+
+If your team is running sourcing decisions out of a workbook that three people keep forking, I'd like to see it. Happy to share a walkthrough.
+
+Open to Operations Strategy and Supply Chain roles where consulting insight gets built into something.
+
+#GlobalSourcing #OperationsStrategy #SupplyChain #ProductStrategy
